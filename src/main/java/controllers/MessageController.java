@@ -29,8 +29,8 @@ public class MessageController extends HttpServlet {
 				// 메시지
 				String message = request.getParameter("message");
 
-				dao.insertMessage(new MessageDTO(0, writer, message, null));
-				response.sendRedirect("/index.html");
+				dao.insert(new MessageDTO(0, writer, message, null));
+				response.sendRedirect("/index.jsp");
 			} 
 			// 리스트
 			else if(cmd.equals("/list.message")) {
