@@ -29,12 +29,12 @@ public class MessageController extends HttpServlet {
 				// 메시지
 				String msg = request.getParameter("msg");
 
-				dao.insertgit(new GameUserDTO(0, writer, msg, null));
+				dao.insert(new GameUserDTO(0, writer, msg, null));
 				response.sendRedirect("/index.jsp");
 			} 
 			// 리스트
 			else if(cmd.equals("/list.message")) {
-				List<MessageDTO> list = new ArrayList<>();
+				List<GameUserDTO> list = new ArrayList<>();
 
 				list = dao.selectAll();
 				request.setAttribute("list", list);			
