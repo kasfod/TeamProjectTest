@@ -39,6 +39,7 @@
 			<c:otherwise>
 				<tr>
 					<td>Messages가 비어있습니다.</td>
+					
 				</tr>
 			</c:otherwise>
 		</c:choose>
