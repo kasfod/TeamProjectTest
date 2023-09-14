@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.MessageDAO;
-import dto.MessageDTO;
+import game_userDTO.GameUserDTO;
 
 @WebServlet("*.message")
 public class MessageController extends HttpServlet {
@@ -29,7 +29,7 @@ public class MessageController extends HttpServlet {
 				// 메시지
 				String message = request.getParameter("message");
 
-				dao.insert(new MessageDTO(0, writer, message, null));
+				dao.insertgit(new GameUserDTO(0, writer, message, null));
 				response.sendRedirect("/index.jsp");
 			} 
 			// 리스트
@@ -61,7 +61,7 @@ public class MessageController extends HttpServlet {
 				// 검색에 사용할 번호
 				int seq = Integer.parseInt(request.getParameter("seq"));
 
-				dao.updateBySeq(new MessageDTO(seq, writer, message, null));
+				dao.updateBySeq(new GameUserDTO(seq, writer, message, null));
 				response.sendRedirect("/list.message");
 
 			}
