@@ -27,9 +27,9 @@ public class MessageController extends HttpServlet {
 				// 작성자
 				String writer = request.getParameter("writer");
 				// 메시지
-				String message = request.getParameter("message");
+				String msg = request.getParameter("msg");
 
-				dao.insertgit(new GameUserDTO(0, writer, message, null));
+				dao.insertgit(new GameUserDTO(0, writer, msg, null));
 				response.sendRedirect("/index.jsp");
 			} 
 			// 리스트
@@ -57,11 +57,11 @@ public class MessageController extends HttpServlet {
 				// 수정할 이름
 				String writer = request.getParameter("writer");
 				// 수정할 내용
-				String message = request.getParameter("message");
+				String msg = request.getParameter("msg");
 				// 검색에 사용할 번호
 				int seq = Integer.parseInt(request.getParameter("seq"));
 
-				dao.updateBySeq(new GameUserDTO(seq, writer, message, null));
+				dao.updateBySeq(new GameUserDTO(seq, writer, msg, null));
 				response.sendRedirect("/list.message");
 
 			}
