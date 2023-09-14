@@ -20,7 +20,7 @@
 
 <body>
     <div class="container mt-5">
-        <form action="" method="post">
+        <form action="/insert.message" method="post">
             <div class="table_container d-flex justify-content-center">
                 <table border=1>
                     <tr>
