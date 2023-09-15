@@ -26,7 +26,7 @@
 			</tr>
 
 			<c:choose>
-				<c:when test="${GameUserDTO.size() != 0 }">
+				<c:when test="${list.size() != 0 }">
 					<c:forEach var="i" items="${list }">
 						<tr>
 							<td>${i.seq }</td>
