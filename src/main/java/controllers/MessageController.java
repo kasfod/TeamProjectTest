@@ -40,7 +40,7 @@ public class MessageController extends HttpServlet {
 				request.setAttribute("list", list);			
 
 				// list를 list.jsp로 전송
-				request.getRequestDispatcher("/list.jsp").forward(request, response);
+				request.getRequestDispatcher("//outputForm.jsp").forward(request, response);
 			}
 
 		} catch(Exception e) {
