@@ -9,7 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 </head>
 <body>
-	<a href="/insert.message"> <input type="button" value="input">
+	<a href="/inputForm.jsp"> <input type="button" value="input">
 	</a>
 
 	<a href="/list.message"> <input type="button" value="output">
